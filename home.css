@@ -28,40 +28,115 @@ body {
     width: 100vw;
     height: 100vh;
     position: relative;
-
-    background: linear-gradient(180deg, rgba(18,6,1,1) 40%, rgba(57,30,12,1) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, #261206 100%);
 }
 
 /** Header **/
 .header {
-    border-bottom: 2px solid rgb(87, 44, 26);
     width: 100%;
-    height: 10%;
+    height: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 10px;
+    padding-top: 20px;
 }
 
-.header-bg {
-    position: absolute;
-    z-index: 0;
+.header-icon {
+    width: 10%;
+    height: auto;
+}
 
-    background-color: black;
-    opacity: 0.3;
+.header-text {
+    font-family: justCosmic;
+    font-size: 3.0rem;
+    color: wheat;
+}
+
+/** Menu **/
+.menu {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #443c38;
+}
+
+.menu-li {
+    float: left;
+    list-style-type: none;
+    padding: 10px;
+    font-size: 1.7rem;
+    color: white;
+}
+
+.menu-li:hover {
+    cursor: pointer;
+    color: #42758a;
+}
+
+/** vert */
+.vertical-sec {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin-top: 30px;
+}
+
+.sec-icon {
+    position: relative;
     width: 100%;
     height: 100%;
 }
 
-.header-container {
+.statue {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    transform: rotate(10deg);
+}
+
+.stars {
+    position: absolute;
+    z-index: 1;
+    width: 30%;
+    height: auto;
+    left: 10px;
+}
+
+.vert-content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
-.header-text {
-    position: absolute;
-    z-index: 1;
-
+.sec-title {
     font-family: justCosmic;
-    font-size: 20px;
-    color: wheat;
-    top: 3.5%;
+    font-size: 2.5rem;
+    color: #8c654d;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #412f24;
+    margin-right: 10px;
+}
+
+.sec-desc {
+    color: white;
+    margin-right: 10px;
+    font-family: Times New Roman;
+    padding-top: 10px;
+}
+
+.button {
+    border: 1px solid #8c654d;
+    background-color: transparent;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-right: 25px;
 }
 
 @media only screen and (min-width: 360px) {
