@@ -15,8 +15,8 @@
 }
 
 html {
-    font-size: 62.5%
-    /** Makes it so that 0.1 rem = 1 px **/
+    font-size: 62.5%; /** Makes it so that 0.1 rem = 1 px **/
+    overflow-x: hidden;
 }
 
 a {
@@ -25,8 +25,11 @@ a {
 
 body {
     overflow-x: hidden;
-    padding: 0;
     margin: 0;
+    min-width: 100vw;
+    min-height: 125vh;
+    background-image: url("assets/Bg.png");
+    background-size: cover;
 }
 
 /** Extra **/
@@ -36,10 +39,8 @@ body {
 
 .container {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
-    background-image: url("assets/Bg.png");
-    background-size: cover;
 }
 
 /** Header **/
@@ -51,10 +52,11 @@ body {
     align-items: center;
     gap: 10px;
     padding-top: 5px;
+    background-color: black;
 }
 
 .header-icon {
-    width: 10%;
+    width: 8%;
     height: auto;
 }
 
@@ -81,16 +83,18 @@ body {
 
 .menu-li:hover {
     cursor: pointer;
-    color: #42758a;
+    color: #855c2c;
 }
 
 .gallery-show {
-    margin-top: 25px;
+    margin-top: 30px;
+    margin-bottom: 40px;
     display: flex;
     justify-content: center;
     gap: 25px;
 }
 
+/** Galery **/
 .gallery-item {
     width: 45%;
     height: auto;
@@ -98,28 +102,28 @@ body {
     box-shadow: 0px 0px 5px #a34a1d;
 }
 
-/** vert */
-.vertical-sec {
+/** horz 1*/
+.horizontal-sec-1 {
     display: grid;
     grid-template-columns: 40% 60%;
     margin-top: 30px;
+    margin-bottom: 50px;
 }
 
-.sec-icon {
+.sec-icon-1 {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-.statue {
+.sec-img-1 {
     position: absolute;
-    width: 100%;
+    width: 115%;
     height: auto;
     z-index: 0;
-    transform: rotate(10deg);
 }
 
-.stars {
+.sec-decor-1 {
     position: absolute;
     z-index: 1;
     width: 30%;
@@ -127,29 +131,33 @@ body {
     left: 10px;
 }
 
-.vert-content {
+.horz-content-1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.sec-title {
+.sec-title-1 {
     font-family: justCosmic;
-    font-size: 2.5rem;
+    font-size: 3.0rem;
     color: #8c654d;
     letter-spacing: 2px;
-    border-bottom: 2px solid #412f24;
-    margin-right: 10px;
+    text-align: center;
+    max-width: 10ch;
+    margin-left: 20px;
 }
 
-.sec-desc {
+.sec-desc-1 {
     color: white;
-    margin-right: 10px;
     font-family: Times New Roman;
-    padding-top: 10px;
+    padding-top: 5px;
+    max-width: 38ch;
+    text-align: center;
+    font-size: 1.0rem;
+    margin-left: 20px;
 }
 
-.button {
+.button-1 {
     border: 1px solid #8c654d;
     background-color: transparent;
     color: white;
@@ -164,22 +172,224 @@ body {
     margin-right: 25px;
 }
 
-@media only screen and (min-width: 360px) {
-    
+/** Horz 2 **/
+.horizontal-sec-2 {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.horz-content-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sec-title-2 {
+    font-family: justCosmic;
+    font-size: 3.0rem;
+    color: #8c654d;
+    letter-spacing: 2px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.sec-desc-2 {
+    color: white;
+    margin-left: 45px;
+    font-family: Times New Roman;
+    padding-top: 5px;
+    max-width: 38ch;
+    text-align: center;
+    font-size: 1.0rem;
+}
+
+.button-2 {
+    border: 1px solid #8c654d;
+    background-color: transparent;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-right: 25px;
+    margin-left: 45px;
+}
+
+.sec-icon-2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.sec-img-2 {
+    position: absolute;
+    width: 130%;
+    height: auto;
+    z-index: 0;
+    padding-right: 60px;
+}
+
+.sec-decor-2 {
+    position: absolute;
+    z-index: 1;
+    width: 25%;
+    height: auto;
+    right: 10px;
+}
+
+/** Horz 3 **/
+.sec-img-3 {
+    position: absolute;
+    width: 115%;
+    height: auto;
+    z-index: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.sec-decor-3 {
+    position: absolute;
+    z-index: 1;
+    width: 25%;
+    height: auto;
+    right: -20px;
+    top: -10px;
+}
+
+/** Map **/
+.map-container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.map-title {
+    font-size: 3.0rem;
+    color: #d8a483;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.map {
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/** Footer **/
+.footer {
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.723);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
 }
 
 @media only screen and (min-width: 450px) {
-    
+    .sec-img-1 {
+        width: 100%;
+    }
+
+    .sec-title-1 {
+        margin-left: 45px;
+    }
+
+    .sec-desc-1 {
+        margin-left: 45px;
+    }
+
+    .sec-img-2 {
+        width: 115%;
+    }
+
+    .sec-desc-2 {
+        margin-left: 60px;
+    }
+
+    .sec-img-3 {
+        width: 100%;
+        margin-left: 10px;
+    }
+
+    .map {
+        width: 90%;
+    }
 }
 
-@media only screen and (min-width: 540px) {
-    
+@media only screen and (min-width: 520px) {
+    .sec-img-1 {
+        width: 95%;
+        margin-left: 20px;
+    }
+
+    .sec-title-1 {
+        margin-left: 65px;
+    }
+
+    .sec-desc-1 {
+        font-size: 1.6rem;
+        text-align: center;
+        min-width: 100%;
+        padding-right: 100px;
+    }
+
+    .sec-img-2 {
+        width: 115%;
+    }
+
+    .sec-desc-2 {
+        margin-left: 40px;
+        font-size: 1.6rem;
+    }
+
+    .sec-img-3 {
+        width: 100%;
+        margin-left: 10px;
+    }
+
+    .sec-desc-3 {
+        font-size: 1.6rem;
+    }
+
+    .map {
+        width: 90%;
+    }
 }
 
 @media only screen and (min-width: 600px) {
-    
+    .sec-img-1 {
+        width: 90%;
+    }
+
+    .sec-img-2 {
+        width: 95%;
+    }
+
+    .gallery-item {
+        width: 40%;
+    }
 }
 
 @media only screen and (min-width: 700px) {
-    
+    .sec-img-1 {
+        padding-left: 30px;
+    }
+
+    .gallery-item {
+        width: 35%;
+    }
 }
