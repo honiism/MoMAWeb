@@ -2,6 +2,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
 }
 
 @font-face {
@@ -21,6 +27,10 @@ html {
 
 a {
     all: unset;
+}
+
+p {
+    cursor: default;
 }
 
 body {
@@ -76,7 +86,7 @@ body {
 }
 
 .header-text {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: justCosmic;
     font-size: 2.5rem;
     color: wheat;
 }
@@ -502,10 +512,34 @@ body {
         grid-template-columns: 15% 85%;
     }
 
+    /** sidebar **/
     .sidebar {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.282);
+        background-color: rgba(0, 0, 0, 0.486);
         border-right: 1px solid rgb(205, 165, 112);
+    }
+
+    .sidebar-title {
+        font-family: justCosmic;
+        font-size: 3.0rem;
+        color: wheat;
+        margin-bottom: 15px;
+    }
+
+    .sidebar-li {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 2.0rem;
+        color: rgb(205, 165, 112);
+        margin-bottom: 10px;
+    }
+
+    .sidebar-li:hover {
+        cursor: pointer;
+        color: #8c654d;
     }
 
     .content {
