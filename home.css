@@ -111,6 +111,10 @@ body {
     color: #855c2c;
 }
 
+.sidebar {
+    display: none;
+}
+
 /** Galery **/
 .gallery-show {
     margin-top: 30px;
